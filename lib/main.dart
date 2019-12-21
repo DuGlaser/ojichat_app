@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './component/ChatTimeLine.dart';
 
 void main() => runApp(
       MaterialApp(
@@ -33,24 +34,7 @@ class ChatScreenState extends State<ChatScreen> {
             // ChatTextArea(),
           ],
         ),
+        backgroundColor: Colors.deepOrange[50],
       );
 }
 
-class ChatTimeline extends StatelessWidget {
-  final List<String> chat;
-  ChatTimeline({this.chat});
-
-  @override
-  Widget build(BuildContext context) => Expanded(
-        child: Container(
-          child: ListView.builder(
-            itemCount: chat.length,
-            itemBuilder: (context, index) {
-              return ListTile(
-                title: Text(chat[index]),
-              );
-            },
-          ),
-        ),
-      );
-}
