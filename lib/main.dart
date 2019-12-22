@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './component/ChatTimeLine.dart';
+import './component/ChatTextArea.dart';
 
 void main() => runApp(
       MaterialApp(
@@ -14,11 +15,18 @@ class ChatScreen extends StatefulWidget {
 }
 
 class ChatScreenState extends State<ChatScreen> {
+  List<String> speaker = [];
   List<String> chat = [];
 
   void addChat(String chatdata) {
     setState(() {
       chat.add(chatdata);
+    });
+  }
+
+  void addSpeaker(String speakerData) {
+    setState(() {
+      speaker.add(speakerData);
     });
   }
 
@@ -30,11 +38,10 @@ class ChatScreenState extends State<ChatScreen> {
         ),
         body: Column(
           children: <Widget>[
-            ChatTimeline(chat: chat),
-            // ChatTextArea(),
+            ChatTimeline(speaker: speaker, chat: chat),
+            ChatTextArea(addSpeaker: addSpeaker, addChat: addChat),
           ],
         ),
         backgroundColor: Colors.deepOrange[50],
       );
 }
-
