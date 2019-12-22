@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ChatTimeline extends StatelessWidget {
+  final List<String> speaker;
   final List<String> chat;
-  ChatTimeline({this.chat});
+  ChatTimeline({this.speaker, this.chat});
 
   @override
   Widget build(BuildContext context) => Expanded(
@@ -14,7 +15,7 @@ class ChatTimeline extends StatelessWidget {
                 child: ListTile(
                   leading: Icon(Icons.people),
                   title: Text(
-                    chat[index],
+                    speaker[index],
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.pink,
@@ -22,7 +23,7 @@ class ChatTimeline extends StatelessWidget {
                     ),
                   ),
                   subtitle: Text(
-                    "",
+                    chat[index],
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.black87,
