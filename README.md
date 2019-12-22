@@ -27,16 +27,16 @@ ChatScreen (main.dart)
 
 ## 関数
 (main.dart)
-addChat: 変数chatに値を追加する。(ChatTextAreaで使用)
-addSpeaker: 変数speakerに値を追加する。(ChatTextAreaで使用)
+* addChat: 変数chatに値を追加する。(ChatTextAreaで使用)
+* addSpeaker: 変数speakerに値を追加する。(ChatTextAreaで使用)
 * 本当はJSONでやった方がいいんだろうけどねぇ；；
 
 (ChatTextArea.dart)
-sendMessage: メッセージをaddChat,addSpeakerを使い追加し、オジチャットを取得。オジチャットも同同様に追加する。
+* sendMessage: メッセージをaddChat,addSpeakerを使い追加し、オジチャットを取得。オジチャットも同同様に追加する。
 
 ## 変数
-chat: chatの内容が入っている。変数chatは変数speakerと一対一で対応している。
-speaker: 誰が発言したかの情報が入っている。変数chatは変数speakerと一対一で対応している。
+* chat: chatの内容が入っている。変数chatは変数speakerと一対一で対応している。
+* speaker: 誰が発言したかの情報が入っている。変数chatは変数speakerと一対一で対応している。
 
 # サーバー側
 > https://github.com/DuGlaser/ojichat
